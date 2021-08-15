@@ -1,10 +1,18 @@
 import React from 'react';
+import { Switch, Route,  BrowserRouter as Router } from 'react-router-dom';
+import { Cart } from './components/pages/Cart';
+import { Menu } from './components/pages/Menu';
+import { UserInfo } from './components/pages/UserInfo';
 
 function App() {
   return (
-    <div>
-      HERE
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/menu" component={Menu}/>
+        <Route path="/cart" component={Cart}/>
+        <Route path="/account" component={UserInfo}/>
+      </Switch>
+    </Router>
   );
 }
 
