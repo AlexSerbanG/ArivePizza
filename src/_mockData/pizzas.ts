@@ -47,3 +47,11 @@ export const pizaSizePriceMap: {
   [PizzaSize.medium]: 20,
   [PizzaSize.large]: 25,
 };
+
+export const pizzaSizeNameMap: {
+  [key: number]: string;
+} = {
+  [PizzaSize.small]: 'small',
+  [PizzaSize.medium]: 'medium',
+  [PizzaSize.large]: 'large',
+}

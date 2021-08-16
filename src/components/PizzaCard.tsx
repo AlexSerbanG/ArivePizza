@@ -153,7 +153,7 @@ export const PizzaCard: React.FC<PizzaCardProps> = ({
               disabled={size === -1}
               onClick={() => {
                 addToCart({
-                  id: 1,
+                  name,
                   size,
                   toppings: toppings.filter(
                     (topping) => checkedToppings[topping.type]

@@ -10,6 +10,7 @@ import { Menu } from "./components/pages/Menu";
 import { Account } from "./components/pages/Account";
 import { UserContextProvider } from "./_context/UserContext";
 import { CartContextProvider } from "./_context/CartContext";
+import { OrderSuccess } from "./components/pages/OrderSuccess";
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
       <CartContextProvider>
         <Router>
           <Switch>
-            <Route path="/menu" component={Menu} />
-            <Route path="/cart" component={Cart} />
-            <Route path="/account" component={Account} />
+            <Route path="/menu" exact component={Menu} />
+            <Route path="/cart" exact component={Cart} />
+            <Route path="/account" exact component={Account} />
+            <Route path="/order-success" exact component={OrderSuccess} />
             <Redirect to="/menu" />
           </Switch>
         </Router>

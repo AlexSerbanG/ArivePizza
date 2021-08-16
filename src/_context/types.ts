@@ -29,7 +29,7 @@ export type CartContextValue = {
 };
 
 export type Product = {
-  id: number,
+  name: string,
   size: PizzaSize,
   toppings: Topping[],
 };
