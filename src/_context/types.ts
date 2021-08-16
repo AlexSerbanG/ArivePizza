@@ -1,13 +1,12 @@
 export type UserInfo = {
-  firstName: string;
-  lastName: string;
+  name: string;
   address: Address;
   phone: string;
 };
 
 export type Address = {
   streetName: string;
-  streetNumber: string;
+  houseNumber: string;
   postalCode: string;
   cityId: number;
 };
@@ -15,9 +14,10 @@ export type Address = {
 export type City = {
   id: number;
   name: string;
-}
+};
 
 export type UserContextValue = {
-  user: UserInfo | undefined;
-  updateUser: (user: UserInfo) => void;
-}
+  user: UserInfo;
+  updateUser: (user: UserInfo) => Promise<void>;
+  isValid: boolean;
+};
