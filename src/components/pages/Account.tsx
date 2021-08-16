@@ -36,7 +36,7 @@ export const Account = () => {
     initialValues: user,
     validationSchema,
     onSubmit: (values: UserInfo) => {
-      updateUser(user).then(() => history.push('/menu'));
+      updateUser(values).then(() => history.push('/menu'));
     },
     validateOnBlur: true,
   });

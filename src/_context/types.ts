@@ -21,3 +21,34 @@ export type UserContextValue = {
   updateUser: (user: UserInfo) => Promise<void>;
   isValid: boolean;
 };
+
+export type CartContextValue = {
+  products: Product[];
+  addToCart: (product: Product) => void;
+  clearCart: () => void;
+};
+
+export type Product = {
+  id: number,
+  size: PizzaSize,
+  toppings: Topping[],
+};
+
+export enum PizzaSize {
+  small,
+  medium,
+  large
+}
+
+export type Topping = {
+  type: ToppingType;
+  price: number;
+  name: string;
+}
+
+export enum ToppingType {
+  Olives,
+  Pepperoni,
+  Mushrooms,
+  Pepper,
+};
