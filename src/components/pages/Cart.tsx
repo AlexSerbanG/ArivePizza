@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
       padding: "1rem",
     },
   },
+  container: {
+    border: `2px solid ${theme.palette.primary}`
+  }
 }));
 
 export const Cart = () => {

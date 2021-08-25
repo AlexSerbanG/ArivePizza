@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     appBarContainer: {
-      marginBottom: '5rem',
+      marginBottom: '2rem',
     },
     menuContainer: {
       padding: '2rem 1rem 5rem 3rem',
@@ -67,7 +67,7 @@ export const Menu = () => {
           </Toolbar>
         </AppBar>
       </Grid>
-      <Grid item container className={classes.menuContainer}>
+      <Grid item container className={classes.menuContainer} justifyContent="space-evenly">
         {pizzas.map((pizza) => (
           <Grid item key={pizza.id}>
             <PizzaCard {...pizza} toppings={toppings} addToCart={addToCart}/>

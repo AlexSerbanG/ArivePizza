@@ -25,7 +25,7 @@ const validationSchema = Yup.object({
   }),
   phone: Yup.string()
     .required("Phone number is required")
-    .matches(/^(()?\d{3}())?(-|\s)?\d{3}(-|\s)?\d{4}$/),
+    .matches(/^(()?\d{3}())?(-|\s)?\d{3}(-|\s)?\d{4}$/, "Invalid phone number"),
 });
 
 export const Account = () => {
@@ -39,6 +39,7 @@ export const Account = () => {
       updateUser(values).then(() => history.push('/menu'));
     },
     validateOnBlur: true,
+    validateOnChange: true,
   });
   const {
     handleSubmit,
